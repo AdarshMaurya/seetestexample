@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Html Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>seecucumber</td>
+                          <td>1</td>
+                        <td>13 Oct 2016, 22:58</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">Authentication.login_Activity_Is_On_Screen()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Authentication.user_Click_On_Login_Button()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Authentication.user_Enters_Valid_Password()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Authentication.user_Enters_Valid_Username()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Authentication.user_Navigates_to_Main_Activity()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.Logout()</td>
+                <td>2</td>
+                <td class="duration" data-value="2017790222">2s 017ms</td>
+                <td class="duration" data-value="1008895111">1s 008ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.setUp()</td>
+                <td>2</td>
+                <td class="duration" data-value="2755978354">2s 755ms</td>
+                <td class="duration" data-value="1377989177">1s 377ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MakePayment.confirmation_dialog_box_pops_out()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MakePayment.user_balance_must_decrease()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MakePayment.user_clicks_on_make_payment()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MakePayment.user_clicks_on_yes()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MakePayment.user_clicks_send_payment()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MakePayment.user_enters_amount()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MakePayment.user_enters_name()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MakePayment.user_enters_phone_number()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MakePayment.user_is_on_main_activity()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MakePayment.user_selects_country()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="skipped">0.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot>
+            <tr>
+              <td>17</td>
+              <td>19</td>
+              <td class="duration">4s 773ms</td>
+              <td class="duration">251ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+      <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+      <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Cucumber-JVM Reports</a>
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
